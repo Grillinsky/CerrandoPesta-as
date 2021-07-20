@@ -57,6 +57,7 @@ header p{
     font-size: 1.7em;
     text-align:justify;
     padding: .1em;
+    text-overflow: ellipsis;
 }
 #irAlTl{
     margin: auto;
@@ -115,13 +116,15 @@ a{
     width: 80vw;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: 45vh 45vh;
+    grid-template-rows: 48vh 48vh;
     align-content: space-around;
 }
 .noticiaGrande{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: black;
     overflow:hidden;
-    margin-bottom: 1px;
     border: 0px white solid;
     border-width: 1px 0px;
     grid-column-end: 4;
@@ -140,15 +143,16 @@ a{
     word-wrap: break-word;
 }
 .linkNoticia{
-    background-color: teal;
+    background-color: rgb(0, 128, 128);
     text-decoration: none;
     color: white;
     border: none;
     text-align: center;
     border-radius: 5%;
     padding: 5px 10px;
-    width: 100px;
-    margin: .1em;
+    width: 25%;
+    margin: .3em;
+    align-self: flex-end;
 }
 .linkNoticia:hover{
     transform: scale(.95);
@@ -157,13 +161,15 @@ a{
     background-color: rgb(1, 83, 83);
 }
 .noticiaChica{
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     grid-column-start: 4;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 2;
     border: 1px white solid;
-    padding: .5em 1em;
+    padding: 0em 1em;
 }
 .noticiaChica p {
     margin: .5em;
@@ -189,13 +195,13 @@ a{
     align-self: center;
     justify-self: center;
     border-radius: 50%;
-    width: 12em;
-    height: 12em;
+    width: 15em;
+    height: 15em;
     border: 4px rgba(255,0,0,0.67) solid;
 }
 .fecha h1{
     text-align: center;
-    font-size: 3em;
+    font-size: 5em;
     text-shadow:  -0.093em 0 1px rgba(255,0,0,0.67), 0.093em 0 1px rgba(0, 255, 255, 0.67);
 }
 .border{
