@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cerrando Pestañas</title>
     <link rel="stylesheet" href="/Css/styles.css">
-    <link rel="stylesheet" href="/Css/fontawesome-free-5.15.3-web/css/all.css">
+    <script src="https://kit.fontawesome.com/37b6b13bc4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header><h1>Cerrando <br> Pestañas</h1>
-        <span> <p>Mi nombre es Martin y, como muchos, siempre intento estar "bien informado". </p><p> Entonces, si veo un titular en Twitter, Instagram, Etcétera, me tomo un momento para abrir la noticia en una "nueva pestaña" y procuro no compartirla u opinar hasta haberla leido.</p><p>
-        Entonces, es asi como, con el tiempo, me encuentro con un centenar de pestañas abiertas, con noticias ¿viejas?, informacion ¿relevante?</p><p> En este blog compartire las mismas y veremos si las noticias pasan, pero la informacion queda.</p></span>
-
-    </header>
-    <a id="irAlTl" href="#noticiasLatest"><h3 >  Ir al Timeline</h3>
+    <header><h1>Cerrando Pestañas</h1>
+        <p>Mi nombre es Martin y, como muchos, siempre intento estar "bien informado". <br> Cuándo veo una noticia en Twitter, Instagram, Etcétera, me tomo un momento para abrir esta noticia en una "nueva pestaña" y procuro no compartirla u opinar hasta haberla leido. <br>
+        Entonces, es asi como me encuentro con un centenar de pestañas abiertas, de noticias ¿viejas?, de informacion ¿relevante? En este blog compartire las mismas y veremos si las noticias pasan, pero la informacion queda.</p>
+        <div  id="irAlTl">
+        <a href="#noticiasLatest"><h3 >  Ir al Timeline</h3>
         <div class="flecha" id="chevron"></div></a>
+        </div>
+    </header>
+
+        <div class="border"></div>
         <section id="noticiasLatest" class="noticias">
             <!-- 3 noticias y la fecha al lado 
             2 noticias ocupan 2/4, otra noticia 1/4 y la fecha 1/4-->
@@ -48,11 +51,35 @@
             <p>Martin Grillo <a href="">martine.grillo@gmail.com</a></p>
         </div>
         <div class="sociales">
-            <a href=""><i class="fab fa-instagram fa-3x"></i></a>
-            <a href=""><i class="fab fa-github fa-3x"></i></a>
-            <a href=""><i class="fab fa-linkedin-in fa-3x"></i></a>
+            <a href="https://www.instagram.com/grillinski/" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
+            <a href="https://github.com/Grillinsky" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+            <a href="https://www.linkedin.com/in/martin-grillo-a78927201/" target="_blank"><i class="fab fa-linkedin-in fa-3x"></i></a>
         </div>
     </footer>
 
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDdkuGtVXOA-u2V7TqjURtz0_yOSrwawoc",
+    authDomain: "cerrandopestanas.firebaseapp.com",
+    projectId: "cerrandopestanas",
+    storageBucket: "cerrandopestanas.appspot.com",
+    messagingSenderId: "924733628130",
+    appId: "1:924733628130:web:2be18e5d4c133dea13c8bb",
+    measurementId: "G-LLXFKMYCEB"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </body>
 </html>

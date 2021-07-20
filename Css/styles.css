@@ -10,87 +10,66 @@
     font-family: P_Athiti;
     src: url(/Css/Fonts/P_Athiti/Athiti-Medium.ttf);
 }
+@font-face {
+    font-family: Slender;
+    src: url(/Css/Fonts/Wire_One/WireOne-Regular.ttf);
+}
 
-html,body{overflow-x: hidden;}
+html,body{
+    overflow-x: hidden;
+    margin: 0%;
+}
 body{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100vh;
     width: 100vw;
     background-color: black;
     color: white;
 }
-footer{
-    width: 80vw;
-    border: 6px white solid;
-    display: flex;
-    margin: auto;
-    height: 7em;
-    align-items: center;
-}
-footer div{
-    width: 50%;
-}
-.contacto{
-    display: block;
-    justify-content: center;
-}
-.contacto h4{
-    text-align: center;
-}
-.contacto p{
-    text-align: center;
-}
-.sociales{
-    display: flex;
-    justify-content: center;
-}
-.sociales a{
-    margin: 1em;
-}
+
 div{
     margin: 0%;
 }
 header{
-    padding: 0%;
-    margin: auto;
-    margin-bottom: 0%;
     display: flex;
-    flex-direction: column;
-    padding-top: 1em;
+    flex-direction: row;
     border: 0px white solid;
     border-width: 0px 6px;
     width: 80vw;
     min-height: 95vh;
     scroll-snap-align: start;
-    position: relative;
 }
 header h1{
-    display: block;
-    text-align: center;
-    font-size: 8rem;
-    font-weight: 400;
-    margin-top: 0px;
-    margin-bottom: .2em;
+    font-family: slender;
+    font-size: 16em;
+    transform: scaleY(1.5) scaleX(0.9);
+    line-height: 1em;
+    text-transform: uppercase;
+    margin: auto;
+    
+}
+header p{
+    margin: 1em .25em;
+    font-size: 1.7em;
+    text-align:justify;
+    padding: .1em;
 }
 #irAlTl{
     margin: auto;
     height: 5vh;
     font-family: H1Exo;
     text-align: center;
+    transform: translateY(-2em);
 }
 #irAlTl h3{
     font-weight: 200;
+    margin: 0%;
 }
-header p{
-    display: block;
-    margin: auto;
-    font-size: 1.9em;
-    padding: 1em 2em;
-    margin-top: 0px;
-    word-spacing:initial;
-}
+
 a{
     text-decoration: none;
     color: white;
@@ -125,7 +104,7 @@ a{
     background: white;
     transform: skew(0deg, -9deg);
 }
-
+/*             NOTICIAS                       */
 
 .noticias{
     scroll-snap-align: start;
@@ -134,27 +113,21 @@ a{
     border-left: 6px white solid;
     border-right: 6px white solid;
     width: 80vw;
-    margin: auto;
-    margin-top: 0%;
-    padding: 1em 0em;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: 47vh 47vh;
-    column-gap: .5em;
-    text-align: justify;
+    grid-template-rows: 45vh 45vh;
+    align-content: space-around;
 }
 .noticiaGrande{
     background-color: black;
     overflow:hidden;
     margin-bottom: 1px;
-    margin-left: 2em;
     border: 0px white solid;
     border-width: 1px 0px;
     grid-column-end: 4;
     grid-column-start: 1;
     padding: 0em 1em;
-
-    position: relative;
+    text-align: justify;
 }
 .noticiaGrande p {
     margin: .5em;
@@ -167,9 +140,6 @@ a{
     word-wrap: break-word;
 }
 .linkNoticia{
-    position:absolute;
-    bottom: .4em;
-    right: 5%;
     background-color: teal;
     text-decoration: none;
     color: white;
@@ -193,7 +163,6 @@ a{
     grid-row-start: 2;
     grid-row-end: 2;
     border: 1px white solid;
-    margin-right: 1em;
     padding: .5em 1em;
 }
 .noticiaChica p {
@@ -208,22 +177,26 @@ a{
     word-wrap: break-word;
 }
 .fecha{
-    box-shadow: 10px 15px 2px white;
-    left: 11em;
+    box-shadow: 10px 15px 2px rgba(0, 255, 255, 0.67);
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 4;
     grid-column-end: 4;
-    text-align: center;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
     border-radius: 50%;
-    width: 9em;
-    height: 9em;
-    border: 4px white solid;
+    width: 12em;
+    height: 12em;
+    border: 4px rgba(255,0,0,0.67) solid;
 }
 .fecha h1{
     text-align: center;
     font-size: 3em;
+    text-shadow:  -0.093em 0 1px rgba(255,0,0,0.67), 0.093em 0 1px rgba(0, 255, 255, 0.67);
 }
 .border{
     height: 2px;
@@ -241,382 +214,30 @@ h2{
 p{
     font-family: P_Athiti;
 }
-/* -----------MEDIA 600----------- */
-@media (max-width: 790px) {
-    body{
-        scroll-snap-type: y mandatory;
-        overflow-y: scroll;
-    }
-    header{
-        border: 0ch;
-        height: 100vh;
-        width: 100vw;
-        margin: 0%;
-        padding-top: 0ch;
-    }
-    header h1{
-        font-size: 4em;
-    }
-    header p{
-        font-size: 1.5em !important;
-        padding-bottom: 0%;
-        text-align: justify;
-    }
-    #chevron {
-        margin: auto;
-        position: relative;
-        text-align: center;
-        padding: 1px;
-        margin-bottom: 1,5px;
-        height: 2px;
-        width: 14em;
-    }
-    #chevron:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 50%;
-        background: white;
-        transform: skew(0deg, 9deg);
-    }
-    #chevron:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 50%;
-        background: white;
-        transform: skew(0deg, -9deg);
-    }
-    .fecha{
-        box-shadow: none;
-        border: 0px;
-        max-height: 3em;
-        position: inherit;
-    }
-    .fecha h1{
-        font-size: 2em !important;
-        text-align: center;
-        margin: 0%;
-    }
-    .noticias{
-        text-align:left;
-        border: 0ch;
-        padding: 0em 0em;
-        height: 100vh;
-        width: 100vw;
-        display: block;
-    }
-    .noticiaGrande{
-        position: relative;
-        padding: .5em .5em;
-        margin-left: .1em;
-        height: 30%;
-        display: flex;
-        flex-direction: column;
-    }
-    .noticiaGrande h2{
-        word-wrap: break-word;
-        overflow: hidden;
-        min-height: 1em;
-        margin: 0% !important;
-        word-break: keep-all;
-        font-weight: 100;
-        font-size: 1.2em;
-    }
-    .noticiaGrande p{
-        word-break: keep-all;
-        overflow: hidden;
-        min-height: 5em;
-    }
-    .noticiaChica{
-        position: relative;
-        padding: .5em .5em;
-        margin: 0%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        max-height: 25%;
-    }
-    .noticiaChica h2{
-        word-break: keep-all;
-        overflow: hidden;
-        min-height: 1em;
-        margin: 0%;
-        font-weight: 100;
-        font-size: 1.2em;
-    }
-    .linkNoticia{
-        position: absolute;
-        width: 90%;
-        height: 1em;
-        border-radius: 1%;
-        font-size: 1.1em;
-    }
-    .border{
-        display: none;
-    }
+footer{
+    width: 80vw;
+    border: 6px white solid;
+    display: flex;
+    height: 7em;
+    align-items: center;
 }
-/* -----------MEDIA 900----------- */
-@media (max-width: 920px) {
-    header{
-        height: 100vh;
-    }
-    header h1{
-        font-size: 5em;
-    }
-    header p{
-        font-size: 1.8em;
-        text-align: justify;
-    }
-    #chevron {
-        margin: auto;
-        position: relative;
-        text-align: center;
-        padding: 1px;
-        margin-bottom: 1,5px;
-        height: 2px;
-        width: 14em;
-    }
-    #chevron:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 50%;
-        background: white;
-        transform: skew(0deg, 9deg);
-    }
-    #chevron:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 50%;
-        background: white;
-        transform: skew(0deg, -9deg);
-    }
-    .fecha{
-        width: 10em;
-        height: 10em;
-        left: 5em;
-        top: 2em;
-    }
-    .fecha h1{
-        font-size: 3em;
-    }
-    .noticiaGrande{
-        margin-left: 0%;
-    }
-    .noticiaGrande h2{
-        word-wrap: break-word;
-        overflow: hidden;
-        min-height: 1em;
-        word-break: keep-all;
-        font-weight: 100;
-        font-size: 1.5em;
-        margin: .5em .5em;
-    }
-    .noticiaGrande p{
-        max-height: 9em;
-        font-size: 1em;
-    }
-    .noticiaChica{
-        margin: 0%;
-    }
-    .noticiaChica h2{
-        word-break: keep-all;
-        overflow: hidden;
-        min-height: 1em;
-        margin: 0%;
-        font-weight: 100;
-        font-size: 1.5em;
-    }
-    .noticiaChica p{
-        word-break: keep-all;
-        text-overflow: ellipsis;
-        max-height: 9em;
-        font-size: 1em;
-    }
-    #irAlTl{
-        position: absolute;
-        left: 35%;
-        bottom: 5%;
-        font-family: H1Exo;
-        text-align: center;
-    }
+footer div{
+    width: 50%;
 }
-/* --------MEDIA 800---------- */
- @media (max-width: 800px) {
-    header{
-        height: 100vh;
-    }
-    header h1{
-        font-size: 4em;
-    }
-    header p{
-        font-size: 1.4em;
-        text-align: justify;
-    }
-    #chevron {
-        margin: auto;
-        position: relative;
-        text-align: center;
-        padding: 1px;
-        margin-bottom: 1,5px;
-        height: 2px;
-        width: 14em;
-    }
-    #chevron:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 50%;
-        background: white;
-        transform: skew(0deg, 9deg);
-    }
-    #chevron:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 50%;
-        background: white;
-        transform: skew(0deg, -9deg);
-    }
-    .fecha{
-        width: 8em;
-        height: 8em;
-        left: 8em;
-    }
-    .fecha h1{
-        text-align: center;
-        font-size: 1em;
-    }
-    .noticias{
-        text-align:left;
-        height: 100vh;
-    }
-    .noticiaGrande{
-        margin-left: .1em;
-        min-height: 33%;
-        display: flex;
-        flex-direction: column;
-    }
-    .noticiaGrande h2{
-        word-wrap: break-word;
-        overflow: hidden;
-        min-height: 1em;
-        word-break: keep-all;
-        font-weight: 100;
-        font-size: 1em;
-        margin: .5em .5em;
-    }
-    .noticiaGrande p{
-        word-break: keep-all;
-        text-overflow: ellipsis;
-        max-height: 9em;
-        font-size: .9em;
-    }
-    .noticiaChica{
-        margin-left: .1em;
-        margin: 0%;
-    }
-    .noticiaChica h2{
-        word-break: keep-all;
-        overflow: hidden;
-        min-height: 1em;
-        margin: 0%;
-        font-weight: 100;
-        font-size: 1em;
-    }
-    .noticiaChica p{
-        word-break: keep-all;
-        text-overflow: ellipsis;
-        max-height: 9em;
-        font-size: .9em;
-    }
-    #irAlTl{
-        margin-top: 3vh;
-        font-family: H1Exo;
-        font-weight: 200;
-        display: block;
-        text-align: center;
-    }
-} 
-/* -----------MEDIA 1360----------- */
-@media (min-width: 1360px){
-    header{
-        height: 100vh;
-    }
-    header h1{
-        font-size: 7.5em;
-        margin-bottom: 0%;
-    }
-    header p{
-        font-size: 2em;
-        padding-bottom: 0%;
-        padding-top: 2vh;
-        text-align: justify;
-    }
-    .fecha{
-        width: 12em;
-        height: 12em;
-    } 
-    .fecha h1{
-        font-size: 4em;
-    } 
-    .noticias{
-        row-gap: 1em;
-        height: 100vh;
-        padding-top: .5em;
-        padding-bottom: .5em;
-    }
-    .noticiaGrande{
-        height: 49vh;
-        margin-left: .1em;
-        display: flex;
-        flex-direction: column;
-    }
-    .noticiaGrande h2{
-        word-wrap: break-word;
-        overflow: hidden;
-        min-height: 1em;
-        margin: 0%;
-        word-break: keep-all;
-        font-weight: 100;
-    }
-    .noticiaGrande p{
-        word-break: keep-all;
-        text-overflow: ellipsis;
-        overflow:inherit;
-        max-height: 13em;
-    }
-    .noticiaChica{
-        height: 100%;
-    }
-    #irAlTl{
-        margin-top: 0%;
-        font-family: H1Exo;
-        font-weight: 200;
-        display: block;
-        text-align: center;
-    }
-    .linkNoticia{
-        position:absolute;
-        bottom: 1.1em;
-        right: 5%;
-        border-radius: 5%;
-        padding: 5px 10px;
-        width: 100px;
-        margin: .1em;
-    }
+.contacto{
+    display: block;
+    justify-content: center;
+}
+.contacto h4{
+    text-align: center;
+}
+.contacto p{
+    text-align: center;
+}
+.sociales{
+    display: flex;
+    justify-content: center;
+}
+.sociales a{
+    margin: 1em;
 }
