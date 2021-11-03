@@ -12,9 +12,12 @@
 </head>
 <body>
     <header>
-        <h1>Cerrando <br> Pestañas</h1>
-        <span> <p>Mi nombre es Martin y, como muchos, intento estar "bien informado". </p><p> Entonces, si veo un titular en Twitter, Instagram, Etcétera, me tomo un momento para abrir la noticia en una "nueva pestaña" y procuro no compartirla u opinar hasta haberla leido.</p><p>
-        Es asi como, con el tiempo, me encuentro con un centenar de pestañas abiertas, con noticias ¿viejas?, informacion ¿relevante?</p><p> En este blog quiero compartir las noticias que habitan esas pestañas y ver si las noticias pasan, pero la informacion queda y tal vez asi, podemos Cerrar Pesañas y Abrir los Ojos</p></span>
+        <div id="tituloHeader" class="tituloHeader"><h1>Cerrando <br> Pestañas</h1></div>
+        <div id="presentacion" class="presentacion ">
+            <p>Mi nombre es Martin y, como muchos, intento estar "bien informado". </p><p> Entonces, si veo un titular en Twitter, Instagram, Etcétera, me tomo un momento para abrir la noticia en una "nueva pestaña" y procuro no compartirla u opinar hasta haberla leido.</p><p>
+            Es asi como, con el tiempo, me encuentro con un centenar de pestañas abiertas, con noticias ¿viejas?, informacion ¿relevante?</p><p> En este blog quiero compartir las noticias que habitan esas pestañas y ver si las noticias pasan, pero la informacion queda y tal vez asi, podemos Cerrar Pesañas y Abrir los Ojos</p></div>
+        <button id="expand" >Info del Proyecto</button>
+
 
     </header>
     <a id="irAlTl" href="#noticiasLatest"><h3 >  Ir al Timeline</h3>
@@ -199,6 +202,18 @@
             <a href="https://www.linkedin.com/in/martin-grillo-a78927201/"><span class="hide-element">LinkedIn Link</span><i class="fab fa-linkedin-in fa-3x"></i></a>
         </div>
     </footer>
+
+
+    <script>
+        const presentacion = document.getElementById("presentacion");
+        const titulo = document.getElementById("tituloHeader");
+        const expandBtn = document.getElementById("expand");
+
+        expandBtn.addEventListener("click", function(){
+            presentacion.classList.toggle("presentacionExpanded");
+        })
+
+    </script>
     <script src="https://kit.fontawesome.com/37b6b13bc4.js" crossorigin="anonymous"></script>
 </body>
 </html>
